@@ -1,0 +1,195 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.6;
+	color: #393939;
+	background-color: #F9F9F9;
+}
+
+p {
+	font-size: .95em;
+	margin-bottom: 2em;
+	font-weight: 300;
+}
+
+h2,
+h3 {
+	font-weight: 400;
+	margin-bottom: 0;
+}
+
+h2 {
+	font-size: 1.1em;
+}
+
+h3 {
+	font-size: 1em;
+}
+
+a {
+	text-decoration: none;
+	color: #393939;
+}
+
+img {
+	max-width: 100%;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+.student-name {
+	font-size: 1.5em;
+  margin: 0; /* Remove default top and bottom margin and avoids collapsing margins */
+}
+
+.main-nav {
+  margin-top: 0px;
+  padding: 15px 10px;
+}
+
+.main-nav li {
+	list-style-type: none;
+	background-color: #fff;
+	margin: 5px 0;
+}
+
+.main-nav a {
+	font-size: .95em;
+	font-weight: 700;
+	display: block;
+	text-transform: uppercase;
+  padding: 10px 20px; /* Makes the clickable area of the nav items and site name bigger */
+}
+
+.main-nav a:hover {
+	color: #093a58;
+}
+
+
+/* ---- Layout Containers ---- */
+
+.main-header {
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
+.main-header,
+.intro,
+.portfolio,
+.contact {
+	text-align: center;
+}
+
+.intro {
+	margin-bottom: 40px;
+}
+
+.portfolio {
+	background-color: #fff;
+	padding: 20px 0;
+}
+
+.contact {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.col,
+.intro-text,
+.intro-image {
+  padding-left: 1em; /* Creates gutters on either side of the column */
+  padding-right: 1em;
+}
+
+.main-footer {
+	padding: 1em 0 3em;
+  border-top: 1px solid #D6D2D2;
+  margin: 0 10px;
+}
+
+/* ---- Page Elements ---- */
+
+.intro p,
+.contact p {
+	color: #827B7B;
+}
+
+.profile-image {
+	padding-left: 2em;
+  padding-right: 2em;
+}
+
+.section-title {
+	font-size: .9em;
+	text-transform: uppercase;
+	font-weight: 700;
+	text-align: center;
+	margin: 30px 0 40px;
+}
+
+.contact-dets {
+	line-height: 2.5;
+}
+
+.contact-dets span {
+	font-weight: 600;
+	margin-left: 15px;
+}
+
+.contact-dets a {
+	color: #827B7B;
+}
+
+.footer-name, 
+.top {
+	font-size: .8em;
+	font-weight: 700;
+}
+	
+.footer-name {
+	float: left;
+}
+
+.footer-nav {
+	display: none;
+}
+
+.top {
+	float: right;
+	text-transform: uppercase;
+}
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 768px) {
+
+	
+	/* ---- Float clearfix ---- */
+
+	.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+
+}
+
+	
+@media (min-width: 1024px) {
+
+  
+}
