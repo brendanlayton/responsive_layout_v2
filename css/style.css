@@ -11,8 +11,8 @@ body {
 	line-height: 1.6;
 	color: #393939;
 	background-color: #F9F9F9;
+	background-image: url('../images/light_wool.png');
 	margin: 0;
-	background: url("light_wool.png") repeat;
 }
 
 p {
@@ -92,7 +92,6 @@ a.active {
 }
 
 
-
 /* ---- Layout Containers ---- */
 
 .main-header {
@@ -113,12 +112,13 @@ a.active {
 
 .portfolio {
 	background-color: #003342;
-	padding: 20px 0;
+	padding: 50px 0;
 }
 
 .contact {
-	margin-left: 5px;
-	margin-right: 5px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin: 50px 0;
 }
 
 .intro-text,
@@ -139,15 +139,13 @@ a.active {
 .intro p,
 .contact p {
 	color: #827B7B;
+	padding: 0 8px;
 }
 
 .profile-image {
-/*
-	padding-left: 2em;
-  padding-right: 2em;
-*/
 	padding: 10px;
   border: #D2D2D2 2px solid;
+	width: 75%;
 }
 
 .section-title {
@@ -155,7 +153,7 @@ a.active {
 	text-transform: uppercase;
 	font-weight: 700;
 	text-align: center;
-	margin: 30px 0 40px;
+	margin: 0 0 40px;
 }
 
 .portfolio img:hover {
@@ -181,6 +179,10 @@ a.active {
 
 .contact-dets a {
 	color: #827B7B;
+}
+
+.main-footer {
+	color: #003342;
 }
 
 .footer-name, 
@@ -209,11 +211,12 @@ a.active {
 
 @media (min-width: 768px) {
 
+/*
 	body {
 		padding-top: 140px;
 	}
 	
-/* ---- Sticky Header ----	*/
+ ---- Removed Sticky Header because it took up too much of the viewport ----	
 	
 	.main-header {
 		position: fixed;
@@ -225,16 +228,17 @@ a.active {
 		padding: 0;
 		margin: 0;
 	}
-	
-/*
-	.main-header {
-    padding-top: 2em;
-	}
 */
+	
+	.main-header {
+		margin-top: 2em;
+    margin-bottom: 2em;
+	}
 	
 	.main-nav {
 		display: inline-block;
 		margin: 0 auto;
+  	padding: 10px;
 	}
 
   .main-nav li {
@@ -260,36 +264,28 @@ a.active {
 	
 	.intro-text p {
 		text-align: left;
-		font-size: 1.3em;
+		font-size: 1.2em;
 		margin-top: 0;
+		padding: 0 12px;
 	}
 	
-/*
 	.profile-image {
-		padding: 0 10px 0 0;
+		width: 100%;
 	}
-*/
 	
  	.portfolio-item {
   	float: left; 
   }
 	
-	.intro-text,
-	.intro-image,
-	.portfolio-item {
-		padding-left: .6em; /* Creates gutters on either side of the column */
-		padding-right: .6em;
-	}
-	
 	.portfolio {
-		margin-left: -7px;
-		margin-right: -7px;
 		padding-left: 10px;
 		padding-right: 10px;
 	}
 	
 	.portfolio-item {
     width: 50%;
+		padding-left: 0.5em;
+		padding-right: 0.5em;
   }
 	
 	.portfolio-item p {
@@ -298,7 +294,7 @@ a.active {
 	
 	.contact {
 		width: 70%;
-		margin: 0 auto;
+		margin: 20px auto;
 		padding-top: 30px;
 		padding-bottom: 10px;
 	}
@@ -349,9 +345,23 @@ a.active {
 	
 @media (min-width: 1024px) {
 
+	/* ---- Sticky Header ---- */
+	
+	.main-header {
+		position: fixed;
+		width: 100%;
+		z-index: 1000;
+		background-color: rgba(249,249,249,.95);
+		box-shadow: 0 1px 4px rgba(0,0,0,.4);
+		top: 0;
+		padding: 0;
+		margin: 0;
+	}
   	body {
 		padding-top: 80px;
 	}
+	
+		/* ---- End Sticky Header ---- */
 	
 	.container,
 	.intro,
@@ -385,6 +395,13 @@ a.active {
 		padding: 0;
 	}
 	
+	.intro-text,
+	.intro-image,
+	.portfolio-item {
+  	padding-left: 0.6em; /* Creates gutters on either side of the column */
+  	padding-right: 0.6em;
+	}
+	
 	.intro-text {
 		float: left; 
 		width: 55%;
@@ -399,21 +416,23 @@ a.active {
 		font-size: 1.3em;
 	}
 	
+	.profile-image {
+		width: 90%;
+	}
+	
 	.section-title {
 		font-size: 1.1em;
 		margin: 30px 0 50px;
 	}
 	
-/*
-	.profile-image {
-		padding: 0;
-	}
-*/
-	
   .portfolio-item {
     width: 33.333333333333%; /* Three column layout */
 		margin-bottom: 30px;
   }
+	
+	.portfolio-item:nth-child(8n)  {
+		clear: left; /* Ensures 3-column layout doesn't break on larger screens */
+	}
 	
 	.portfolio-item p {
     padding: 0px 10px;
@@ -436,7 +455,8 @@ a.active {
 		font-size: .9em;
 	}
 	
-	 .footer-nav a {
-			font-size: .9em;
+	.footer-nav a {
+		font-size: .9em;
 	 }	
+	
 }
