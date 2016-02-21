@@ -158,6 +158,7 @@ a.active {
 
 .portfolio img:hover {
 	transform: scale(1.5);
+	transition: all 1s;
 }
 
 .portfolio h2 {
@@ -287,6 +288,11 @@ a.active {
 		padding-left: 0.5em;
 		padding-right: 0.5em;
   }
+	
+	.portfolio-item:nth-child(2n)  {
+		clear: left; /* Ensures 2-column layout doesn't break */
+	}
+	
 	
 	.portfolio-item p {
 		padding: 0px 38px;
@@ -430,6 +436,10 @@ a.active {
 		margin-bottom: 30px;
   }
 	
+	.portfolio-item:nth-child(2n)  {
+		clear: none; 
+	}
+	
 	.portfolio-item:nth-child(8n)  {
 		clear: left; /* Ensures 3-column layout doesn't break on larger screens */
 	}
@@ -441,6 +451,7 @@ a.active {
 	.contact {
 		width: 65%;
 		padding-top: 5px;
+		max-width: 1000px;
 	}
 	
 	.contact p {
